@@ -1,0 +1,33 @@
+header{
+   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+   position: fixed;
+   width: 100%;
+   z-index: 100;
+}
+
+.logo{
+   display: inline-block;
+   // vertical-align: bottom;
+   img{
+      height: 38px;
+      width: auto;
+   }
+}
+
+.main-navigation{
+   display: inline-block;
+   float: right;
+   ul{
+      li{
+         list-style-type:  none;
+         display: inline-block;
+         a{
+            display: inline-block;
+            line-height: 38px;
+            font-size: 1.5rem;
+            font-family: $av-demibold;
+            color: $white;
+         }
+      }
+   }
+}
