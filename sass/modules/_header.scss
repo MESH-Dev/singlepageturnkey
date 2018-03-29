@@ -3,14 +3,16 @@ header{
    position: fixed;
    width: 100%;
    z-index: 100;
+   height: 64px;
 }
 
 .logo{
    display: inline-block;
-   // vertical-align: bottom;
+   height: 64px;
    img{
       height: 38px;
       width: auto;
+      margin: 13px 0;
    }
 }
 
@@ -18,15 +20,28 @@ header{
    display: inline-block;
    float: right;
    ul{
+      margin: 0px;
       li{
          list-style-type:  none;
          display: inline-block;
+         margin: 0 0 0 10px;
+         transition: background-color 0.2s ease-in-out;
+         &:hover{
+            background-color: rgba(0,0,0,0.15);
+         }
          a{
             display: inline-block;
-            line-height: 38px;
+            line-height: 64px;
             font-size: 1.5rem;
-            font-family: $av-demibold;
             color: $white;
+            padding: 0 20px;
+            letter-spacing: 1.5px;
+            font-family: $av-demibold;
+            // font-family: $primary_font;
+            // font-weight: 800;
+            &:hover{
+               text-decoration: none;
+            }
          }
       }
    }

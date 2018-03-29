@@ -22,7 +22,10 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<!-- Typography & Icon Fonts -->
-	<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/d83c48dc-a071-4201-8498-8171cd5f545e.css"/>
+	<?php the_field('primary_font_code', 'option'); ?>
+	<?php the_field('secondary_font_code', 'option'); ?>
+	<script type="text/javascript" src="//fast.fonts.net/jsapi/d83c48dc-a071-4201-8498-8171cd5f545e.js"></script>
+	<!-- <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/d83c48dc-a071-4201-8498-8171cd5f545e.css"/> -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
 	<!-- Favicons
@@ -37,20 +40,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<header class="primary">
+	<?php
+	$primary_color = get_field('primary_color', 'option');
+	?>
+	<header style="background:<?php echo $primary_color ?>">
 		<div class="container">
 			<div class="row">
 				<div class="columns-12">
-					<a href="#top">
-						<div class="logo">
-							<?php
-							$logo = get_field('site_logo', 'option');
-							$logo_url = $logo['sizes']['medium'];
-							?>
-							<!-- <h1 class="site-title"><a href="<//?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><//?php bloginfo( 'name' ); ?></a></h1> -->
-							<img src="<?php echo $logo_url ?>" alt="">
-						</div>
+					<a class="logo" href="#top">
+						<?php
+						$logo = get_field('site_logo', 'option');
+						$logo_url = $logo['sizes']['medium'];
+						?>
+						<!-- <h1 class="site-title"><a href="<//?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><//?php bloginfo( 'name' ); ?></a></h1> -->
+						<img src="<?php echo $logo_url ?>" alt="">
 					</a>
 					<nav class="main-navigation">
 						<?php if(has_nav_menu('main_nav')){

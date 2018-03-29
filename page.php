@@ -5,14 +5,29 @@
 	$bg_img = get_field('background_image');
 	$bg_url = $bg_img['sizes']['background-fullscreen'];
 	$primary_color = get_field('primary_color', 'option');
-	?>
-	<div class="welcome-gate" id="top">
+	$secondary_color = get_field('secondary_color', 'option');
+	if (!empty($bg_url)) { ?>
+		<div class="welcome-gate" id="top">
+			<div class="hero" style="background-image:url('<?php echo $bg_url ?>')"></div>
+			<div class="img-filter" style="background-color:<?php echo $primary_color ?>;"></div>
+	<?php } else{ ?>
+		<div class="welcome-gate" id="top" style="background:<?php echo $primary_color ?>;">
+	<?php }; ?>
 		<div class="container">
-			<img class="hero" src="<?php echo $bg_url ?>" alt="heading background">
-			<div class="img-filter" style="background-color:<?php echo $primary_color ?>"></div>
-			<h1><?php the_field('statement'); ?></h1>
-			<p><?php the_field('main_blurb'); ?></p>
+			<div class="row">
+				<div class="sign">
+					<h1><?php the_field('statement'); ?></h1>
+					<p><?php the_field('main_blurb'); ?></p>
+				</div>
+			</div>
 		</div>
+		<a id="scrollLink">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 31">
+			    <g>
+			      <path d="M3,1.31l37.3,27.88L77.6,1.31" style="fill: none;stroke: #fff;stroke-width: 3px"/>
+			    </g>
+			</svg>
+		</a>
 	</div>
 	<?php
 	if(have_rows('panels')):
@@ -25,10 +40,14 @@
 						<div class="container">
 							<div class="row">
 								<div class="columns-5">
-									<h2 class="blurb"><?php the_sub_field('main_blurb'); ?></h2>
-									<div class="cta button">
-										<a href="<?php the_field('cta_link'); ?>"><?php the_sub_field('cta_title'); ?></a>
-									</div>
+									<h2 class="blurb" style="color:<?php echo $primary_color ?>"><?php the_sub_field('main_blurb'); ?></h2>
+									<?php
+									$cta_link = get_sub_field('cta_link');
+									$cta_title = get_sub_field('cta_title');
+									if(!empty($cta_link) || !empty($cta_title)){ ?>
+										<a href="<?php echo $cta_link ?>" style="color:<?php echo $primary_color ?>"><p class="cta" style="color:<?php echo $primary_color ?>"><?php echo $cta_title ?></p></a>
+									<?php };
+									?>
 								</div>
 								<div class="columns-6 offset-by-1">
 									<p><?php the_sub_field('intro_text'); ?></p>
@@ -46,8 +65,13 @@
 				// if(!empty($panel_bg)){
 				// 	$panel_bg_url = $panel_bg['sizes']['background_fullscreen'];
 				// }
-				?>
-				<div class="panel <?php the_sub_field('panel_type'); ?>" id="<?php the_sub_field('panel_id'); ?>" style="background-image:url('<?php echo $panel_bg_url ?>');">
+				if (!empty($panel_bg_url)) { ?>
+					<div class="panel <?php the_sub_field('panel_type'); ?>" id="<?php the_sub_field('panel_id'); ?>">
+						<div class="hero" style="background-image:url('<?php echo $panel_bg_url ?>')"></div>
+						<div class="img-filter" style="background-color:<?php echo $secondary_color ?>"></div>
+				<?php } else{ ?>
+					<div class="panel <?php the_sub_field('panel_type'); ?>" id="<?php the_sub_field('panel_id'); ?>" style="background-color:<?php echo $secondary_color ?>;">
+				<?php }; ?>
 					<div class="container">
 						<div class="row">
 							<?php
@@ -69,14 +93,13 @@
 								<div class="card <?php echo $width_class ?>">
 									<?php
 									$card_img = get_sub_field('card_image');
-									// echo '<pre>';
-									// var_dump($card_img);
-									// echo '</pre>';
 									$card_img_url = $card_img['sizes']['medium_large'];
 									?>
 									<img src="<?php echo $card_img_url ?>" alt="">
-									<h3><?php the_sub_field('card_title'); ?></h3>
-									<p><?php the_sub_field('card_blurb'); ?></p>
+									<div class="text">
+										<h3><?php the_sub_field('card_title'); ?></h3>
+										<p><?php the_sub_field('card_blurb'); ?></p>
+									</div>
 								</div>
 							</a>
 							<?php endwhile; endif; ?>

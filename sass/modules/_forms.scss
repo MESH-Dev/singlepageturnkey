@@ -5,7 +5,7 @@ textarea,
 select {
   height: 38px;
   padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-  background-color: #fff;
+  background: transparent;
   //border: 1px solid lighten($border-color, 8.8%);
   //border-radius: $global-radius;
   box-shadow: none;
@@ -44,8 +44,8 @@ input {
   &[type="tel"]:focus,
   &[type="url"]:focus,
   &[type="password"]:focus {
-    //border: 1px solid $primary-color;
-    outline: 0;
+   //  border: 1px solid $grey;
+   //  outline: 0;
   }
 }
 
@@ -78,4 +78,54 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal;
+}
+
+.name-fields{
+   float: left;
+   width: 50%;
+   &:first-of-type{
+      padding-right: 20px;
+   }
+}
+
+input{
+   border: 2px solid $white;
+   background: transparent;
+   color: $white;
+   font-family: $primary_font;
+   font-size: 2rem;
+   font-weight: 400;
+   margin-bottom: 20px;
+   &[type="text"], &[type="email"]{
+      // padding: 20px 40px;
+      height: 50px;
+   }
+   &[type="text"]{
+      display: block;
+      width: 100%;
+   }
+   &[type="email"]{
+      width: 100%;
+   }
+   &[type="submit"]{
+      text-transform: none;
+      font-size: 2rem;
+      height: 50px;
+      float: right;
+      @media screen and ($bp-smaller-than-tablet){
+         float: none;
+      }
+   }
+}
+
+textarea{
+   border: 2px solid $white;
+   background: transparent;
+   color: $white;
+   font-family: $primary_font;
+   font-size: 2rem;
+   font-weight: 400;
+   margin-bottom: 20px;
+   max-width: 100%;
+   max-height: 400px;
 }

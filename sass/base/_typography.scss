@@ -1,8 +1,8 @@
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+// @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
 
-$merriweather: 'Merriweather', serif;
+$primary_font: 'Nunito Sans', sans-serif;
 $av-ultralight:'AvenirNextLTW01-UltraLi';
 $av-lightital:'AvenirNextW01-LightItal';
 $av-regular:'AvenirNextLTW01-Regular';
@@ -11,6 +11,7 @@ $av-medium:'AvenirNextLTW01-Medium';
 $av-mediumitalic:'AvenirNextLTW01-MediumI_721278';
 $av-demibold:'Avenir Next LT W01 Demi';
 $av-bold:'Avenir Next LT W01 Bold';
+$secondary_font: 'Merriweather', serif;
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
