@@ -906,9 +906,10 @@ header {
     width: 100%;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     display: none;
+    z-index: 10;
   }
 }
-/* line 36, sass/modules/_header.scss */
+/* line 37, sass/modules/_header.scss */
 .main-navigation ul li {
   list-style-type: none;
   display: inline-block;
@@ -916,18 +917,18 @@ header {
   transition: background-color 0.2s ease-in-out;
 }
 @media screen and (max-width: 750px) {
-  /* line 36, sass/modules/_header.scss */
+  /* line 37, sass/modules/_header.scss */
   .main-navigation ul li {
     display: block;
     text-align: center;
     margin-left: 0px;
   }
 }
-/* line 46, sass/modules/_header.scss */
+/* line 47, sass/modules/_header.scss */
 .main-navigation ul li:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
-/* line 49, sass/modules/_header.scss */
+/* line 50, sass/modules/_header.scss */
 .main-navigation ul li a {
   display: inline-block;
   line-height: 64px;
@@ -938,16 +939,16 @@ header {
   transition: box-shadow 0.2s ease-in-out;
   font-family: "Avenir Next LT W01 Demi";
 }
-/* line 60, sass/modules/_header.scss */
+/* line 61, sass/modules/_header.scss */
 .main-navigation ul li a:hover {
   text-decoration: none;
 }
-/* line 63, sass/modules/_header.scss */
+/* line 64, sass/modules/_header.scss */
 .main-navigation ul li a.active {
   box-shadow: inset 0px -2px 0px #FFFFFF;
 }
 
-/* line 71, sass/modules/_header.scss */
+/* line 72, sass/modules/_header.scss */
 #mobileMenuTrigger {
   display: inline-block;
   line-height: 64px;
@@ -958,7 +959,7 @@ header {
   cursor: pointer;
   font-family: "Avenir Next LT W01 Demi";
 }
-/* line 82, sass/modules/_header.scss */
+/* line 83, sass/modules/_header.scss */
 #mobileMenuTrigger:hover {
   text-decoration: none;
 }
