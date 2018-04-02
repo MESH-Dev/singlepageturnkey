@@ -1305,50 +1305,49 @@ footer form p {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
   opacity: 0.8;
 }
 
-/* line 247, sass/modules/_modules.scss */
+/* line 246, sass/modules/_modules.scss */
 .card {
   position: relative;
   text-align: center;
   color: #FFFFFF;
 }
 @media screen and (max-width: 750px) {
-  /* line 247, sass/modules/_modules.scss */
+  /* line 246, sass/modules/_modules.scss */
   .card {
     margin-bottom: 60px;
   }
-  /* line 253, sass/modules/_modules.scss */
+  /* line 252, sass/modules/_modules.scss */
   .card:last-of-type {
     margin-bottom: 0px;
   }
 }
-/* line 257, sass/modules/_modules.scss */
+/* line 256, sass/modules/_modules.scss */
 .card .text {
   max-width: 255px;
   margin: 0 auto;
 }
-/* line 261, sass/modules/_modules.scss */
+/* line 260, sass/modules/_modules.scss */
 .card a {
   color: #FFFFFF;
 }
-/* line 263, sass/modules/_modules.scss */
+/* line 262, sass/modules/_modules.scss */
 .card a:hover {
   text-decoration: none;
 }
-/* line 265, sass/modules/_modules.scss */
+/* line 264, sass/modules/_modules.scss */
 .card a:hover img {
   transform: translateY(-8px);
 }
-/* line 270, sass/modules/_modules.scss */
+/* line 269, sass/modules/_modules.scss */
 .card h3 {
   font-family: "AvenirNextLTW01-MediumI_721278";
   font-size: 3.6rem;
   letter-spacing: 1.4px;
 }
-/* line 278, sass/modules/_modules.scss */
+/* line 277, sass/modules/_modules.scss */
 .card p {
   font-family: "Merriweather", serif;
   color: #FFFFFF;
@@ -1357,7 +1356,7 @@ footer form p {
   letter-spacing: 0.47px;
   line-height: 25px;
 }
-/* line 286, sass/modules/_modules.scss */
+/* line 285, sass/modules/_modules.scss */
 .card img {
   transition: transform 0.2s ease-in-out;
   max-height: 140px;
