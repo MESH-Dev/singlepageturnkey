@@ -16,8 +16,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="sign">
-					<h1><?php the_field('statement'); ?></h1>
-					<p><?php the_field('main_blurb'); ?></p>
+					<h1 id="welcomeTitle"><?php the_field('statement'); ?></h1>
+					<p id="welcomeDesc"><?php the_field('main_blurb'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -45,12 +45,12 @@
 									$cta_link = get_sub_field('cta_link');
 									$cta_title = get_sub_field('cta_title');
 									if(!empty($cta_link) || !empty($cta_title)){ ?>
-										<a href="<?php echo $cta_link ?>" style="color:<?php echo $primary_color ?>"><p class="cta" style="color:<?php echo $primary_color ?>"><?php echo $cta_title ?></p></a>
+										<a href="<?php echo $cta_link ?>"><p class="cta"><?php echo $cta_title ?></p></a>
 									<?php };
 									?>
 								</div>
 								<div class="columns-6 offset-by-1">
-									<p><?php the_sub_field('intro_text'); ?></p>
+									<div class="intro-desc"><?php the_sub_field('intro_text'); ?></div>
 								</div>
 							</div>
 						</div>
@@ -89,19 +89,19 @@
 							}
 							if(have_rows('cards')): while(have_rows('cards')): the_row();
 							?>
-							<a href="<?php the_sub_field('card_link'); ?>">
 								<div class="card <?php echo $width_class ?>">
 									<?php
 									$card_img = get_sub_field('card_image');
 									$card_img_url = $card_img['sizes']['medium_large'];
 									?>
-									<img src="<?php echo $card_img_url ?>" alt="">
-									<div class="text">
-										<h3><?php the_sub_field('card_title'); ?></h3>
-										<p><?php the_sub_field('card_blurb'); ?></p>
-									</div>
+									<a href="<?php the_sub_field('card_link'); ?>">
+										<img src="<?php echo $card_img_url ?>" alt="">
+										<div class="text">
+											<h3><?php the_sub_field('card_title'); ?></h3>
+											<p><?php the_sub_field('card_blurb'); ?></p>
+										</div>
+									</a>
 								</div>
-							</a>
 							<?php endwhile; endif; ?>
 						</div>
 					</div>
@@ -125,7 +125,7 @@
 								// var_dump($id);
 								// echo '</pre>';
 								?>
-								<div class="<?php echo $col_class ?>">
+								<div class="<?php echo $col_class ?> content-col">
 									<?php the_sub_field('content_column'); ?>
 								</div>
 							<?php endwhile; endif; ?>

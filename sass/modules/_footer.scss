@@ -1,5 +1,8 @@
 footer{
    color: $white;
+   @media screen and ($bp-smaller-than-tablet){
+      text-align: center;
+   }
    p{
       font-family: $av-medium;
       font-size: 1.6rem;

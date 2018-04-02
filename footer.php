@@ -3,11 +3,11 @@
 $primary_color = get_field('primary_color', 'option');
 $secondary_color = get_field('secondary_color', 'option');
 ?>
-<footer class=" panel site-footer primary" style="background-color:<?php echo $primary_color ?>;">
+<footer id="footer" class="panel site-footer primary" style="background-color:<?php echo $primary_color ?>;">
 
 	<div class="container">
 		<div class="row">
-         <div class="columns-4">
+         <div id="left-col" class="columns-4">
             <h5 class="footer-title"><?php the_field('contact_section_title', 'option'); ?></h5>
             <?php
             $line1 = get_field('address_line_1', 'option');
@@ -46,7 +46,7 @@ $secondary_color = get_field('secondary_color', 'option');
 					?>
 				</div>
          </div>
-         <div class="columns-6 offset-by-2">
+         <div id="right-col" class="columns-6 offset-by-2">
 				<h5 class="form-title"><?php the_field('contact_form_title', 'option'); ?></h5>
             <?php
             if(!empty($contact_form)){

@@ -55,7 +55,7 @@
 						<!-- <h1 class="site-title"><a href="<//?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><//?php bloginfo( 'name' ); ?></a></h1> -->
 						<img src="<?php echo $logo_url ?>" alt="">
 					</a>
-					<nav class="main-navigation">
+					<nav id="main-nav" class="main-navigation">
 						<?php if(has_nav_menu('main_nav')){
 									$defaults = array(
 										'theme_location'  => 'main_nav',
@@ -78,6 +78,7 @@
 								}else{
 									echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
 								} ?>
+								<a id="mobileMenuTrigger">Menu</a>
 					</nav>
 				</div>
 			</div>
