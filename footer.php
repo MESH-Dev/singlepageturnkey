@@ -54,12 +54,6 @@ $secondary_color = get_field('secondary_color', 'option');
             };
             ?>
          </div>
-			<!-- <div class="columns-12">
-				<nav class="main-navigation">
-					<//?php wp_nav_menu( array('menu_id' => 'footer-menu', 'theme_location' => 'footer-menu') ); ?>
-				</nav>
-					<p>Site by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
-			</div>-->
 		</div>
 		<p class="byline">Site by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 	</div>

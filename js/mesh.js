@@ -51,7 +51,6 @@ jQuery(document).ready(function($){
       $('html,body').animate({
          scrollTop: (dist)
       }, 600);
-      console.log(dist);
    });
 
    //Taken from https://jsfiddle.net/cse_tushar/Dxtyu/141/

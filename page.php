@@ -43,9 +43,10 @@
 									<h2 class="blurb" style="color:<?php echo $primary_color ?>"><?php the_sub_field('main_blurb'); ?></h2>
 									<?php
 									$cta_link = get_sub_field('cta_link');
+									$cta_link_external = get_sub_field('cta_link_external');
 									$cta_title = get_sub_field('cta_title');
-									if(!empty($cta_link) || !empty($cta_title)){ ?>
-										<a href="<?php echo $cta_link ?>"><p class="cta"><?php echo $cta_title ?></p></a>
+									if(!empty($cta_title)){ ?>
+										<a href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?>><p class="cta"><?php echo $cta_title ?></p></a>
 									<?php };
 									?>
 								</div>
@@ -59,12 +60,6 @@
 			} elseif($panel_type == 'cards'){
 				$panel_bg = get_sub_field('panel_background_image');
 				$panel_bg_url = $panel_bg['sizes']['background-fullscreen'];
-				// echo '<pre>';
-				// var_dump($panel_bg);
-				// echo '</pre>';
-				// if(!empty($panel_bg)){
-				// 	$panel_bg_url = $panel_bg['sizes']['background_fullscreen'];
-				// }
 				if (!empty($panel_bg_url)) { ?>
 					<div class="panel <?php the_sub_field('panel_type'); ?>" id="<?php the_sub_field('panel_id'); ?>">
 						<div class="hero" style="background-image:url('<?php echo $panel_bg_url ?>')"></div>
@@ -120,10 +115,6 @@
 								$col_class = 'columns-6';
 							};
 							if(have_rows('text_panel')): while(have_rows('text_panel')) : the_row();
-								// $id = get_sub_field('panel_id');
-								// echo '<pre>';
-								// var_dump($id);
-								// echo '</pre>';
 								?>
 								<div class="<?php echo $col_class ?> content-col">
 									<?php the_sub_field('content_column'); ?>

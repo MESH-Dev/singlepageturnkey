@@ -25,7 +25,6 @@
 	<?php the_field('primary_font_code', 'option'); ?>
 	<?php the_field('secondary_font_code', 'option'); ?>
 	<script type="text/javascript" src="//fast.fonts.net/jsapi/d83c48dc-a071-4201-8498-8171cd5f545e.js"></script>
-	<!-- <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/d83c48dc-a071-4201-8498-8171cd5f545e.css"/> -->
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
 	<!-- Favicons
@@ -34,6 +33,13 @@
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<!-- Analytics -->
+	<?php the_field('google_analytics_code', 'option'); ?>
+
+	<!-- SEO -->
+	<?php the_field('google_sitemap_verification', 'option'); ?>
+	<?php the_field('bing_sitemap_verification', 'option'); ?>
 
 	<!-- BugHerd -->
 	<script type='text/javascript'>
@@ -62,7 +68,6 @@
 						$logo = get_field('site_logo', 'option');
 						$logo_url = $logo['sizes']['medium'];
 						?>
-						<!-- <h1 class="site-title"><a href="<//?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><//?php bloginfo( 'name' ); ?></a></h1> -->
 						<img src="<?php echo $logo_url ?>" alt="">
 					</a>
 					<nav id="main-nav" class="main-navigation">

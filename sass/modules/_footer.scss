@@ -16,11 +16,27 @@ footer{
          margin-bottom: 5px;
       }
    }
+   .contact-media{
+      a, p{
+         font-family: av-bold;
+         font-family: $primary_font;
+         font-weight: 700;
+         text-decoration: none;
+         transition: all 0.2s ease-in-out;
+         &:hover{
+            opacity: 0.8;
+         }
+      }
+   }
    .social{
       margin-top: 10px;
       i, svg{
          font-size: 3.2rem;
          margin-right: 14px;
+         transition: transform 0.2s ease-in-out;
+         &:hover{
+            transform: translateY(-5px);
+         }
       }
    }
    a{
@@ -48,18 +64,25 @@ footer{
 
 .form-title{
    margin-top: 10px;
-   font-family: $av-medium;
+   font-family: $av-bold;
    font-size: 2rem;
-   letter-spacing: 0.4px;
+   letter-spacing: 0.5px;
 }
 
 .byline{
    font-size: 1.2rem;
-   float: right;
+   position: absolute;
+   bottom: 20px;
+   right: 30px;
+   margin: 0px;
    a{
       font-size: 1.2rem;
    }
    @media screen and ($bp-smaller-than-tablet){
-      float: none;
+      position: relative;
    }
+}
+
+#footer{
+   padding-bottom: 86px;
 }
