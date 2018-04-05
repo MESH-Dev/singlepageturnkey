@@ -75,6 +75,18 @@
    background-color: $white;
    &.cards{
       background-color: transparent;
+      .hero{
+         z-index: 0;
+      }
+      .container{
+         z-index: 1;
+      }
+      .row{
+         z-index: 2;
+      }
+      .card{
+         z-index: 2;
+      }
    }
    &.wysiwyg{
       h1,h2,h3,h4,h5,h6{

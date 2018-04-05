@@ -913,31 +913,37 @@ header {
   height: 64px;
   overflow: hidden;
 }
+@media screen and (max-width: 750px) {
+  /* line 1, sass/modules/_header.scss */
+  header {
+    overflow: visible;
+  }
+}
 
-/* line 10, sass/modules/_header.scss */
+/* line 13, sass/modules/_header.scss */
 .logo {
   display: inline-block;
   height: 64px;
   overflow: hidden;
 }
-/* line 14, sass/modules/_header.scss */
+/* line 17, sass/modules/_header.scss */
 .logo img {
   height: 38px;
   width: auto;
   margin: 13px 0;
 }
 
-/* line 21, sass/modules/_header.scss */
+/* line 24, sass/modules/_header.scss */
 .main-navigation {
   display: inline-block;
   float: right;
 }
-/* line 24, sass/modules/_header.scss */
+/* line 27, sass/modules/_header.scss */
 .main-navigation ul {
   margin: 0px;
 }
 @media screen and (max-width: 750px) {
-  /* line 24, sass/modules/_header.scss */
+  /* line 27, sass/modules/_header.scss */
   .main-navigation ul {
     position: fixed;
     top: 64px;
@@ -950,7 +956,7 @@ header {
     z-index: 10;
   }
 }
-/* line 37, sass/modules/_header.scss */
+/* line 40, sass/modules/_header.scss */
 .main-navigation ul li {
   list-style-type: none;
   display: inline-block;
@@ -958,18 +964,18 @@ header {
   transition: background-color 0.2s ease-in-out;
 }
 @media screen and (max-width: 750px) {
-  /* line 37, sass/modules/_header.scss */
+  /* line 40, sass/modules/_header.scss */
   .main-navigation ul li {
     display: block;
     text-align: center;
     margin-left: 0px;
   }
 }
-/* line 47, sass/modules/_header.scss */
+/* line 50, sass/modules/_header.scss */
 .main-navigation ul li:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
-/* line 50, sass/modules/_header.scss */
+/* line 53, sass/modules/_header.scss */
 .main-navigation ul li a {
   display: inline-block;
   line-height: 64px;
@@ -980,16 +986,16 @@ header {
   transition: box-shadow 0.2s ease-in-out;
   font-family: "Avenir Next LT W01 Demi";
 }
-/* line 61, sass/modules/_header.scss */
+/* line 64, sass/modules/_header.scss */
 .main-navigation ul li a:hover {
   text-decoration: none;
 }
-/* line 64, sass/modules/_header.scss */
+/* line 67, sass/modules/_header.scss */
 .main-navigation ul li a.active {
   box-shadow: inset 0px -2px 0px #FFFFFF;
 }
 
-/* line 72, sass/modules/_header.scss */
+/* line 75, sass/modules/_header.scss */
 #mobileMenuTrigger {
   display: inline-block;
   line-height: 64px;
@@ -1000,7 +1006,7 @@ header {
   cursor: pointer;
   font-family: "Avenir Next LT W01 Demi";
 }
-/* line 83, sass/modules/_header.scss */
+/* line 86, sass/modules/_header.scss */
 #mobileMenuTrigger:hover {
   text-decoration: none;
 }
@@ -1222,58 +1228,74 @@ footer form p {
 .panel.cards {
   background-color: transparent;
 }
-/* line 80, sass/modules/_modules.scss */
+/* line 78, sass/modules/_modules.scss */
+.panel.cards .hero {
+  z-index: 0;
+}
+/* line 81, sass/modules/_modules.scss */
+.panel.cards .container {
+  z-index: 1;
+}
+/* line 84, sass/modules/_modules.scss */
+.panel.cards .row {
+  z-index: 2;
+}
+/* line 87, sass/modules/_modules.scss */
+.panel.cards .card {
+  z-index: 2;
+}
+/* line 92, sass/modules/_modules.scss */
 .panel.wysiwyg h1, .panel.wysiwyg h2, .panel.wysiwyg h3, .panel.wysiwyg h4, .panel.wysiwyg h5, .panel.wysiwyg h6 {
   margin-bottom: 1rem;
 }
-/* line 82, sass/modules/_modules.scss */
+/* line 94, sass/modules/_modules.scss */
 .panel.wysiwyg h1 a, .panel.wysiwyg h2 a, .panel.wysiwyg h3 a, .panel.wysiwyg h4 a, .panel.wysiwyg h5 a, .panel.wysiwyg h6 a {
   font-weight: inherit;
   text-decoration: underline;
 }
-/* line 87, sass/modules/_modules.scss */
+/* line 99, sass/modules/_modules.scss */
 .panel.wysiwyg h1 {
   font-family: "Avenir Next LT W01 Demi";
   font-size: 4.8rem;
   letter-spacing: 1.5px;
   color: #c36256;
 }
-/* line 95, sass/modules/_modules.scss */
+/* line 107, sass/modules/_modules.scss */
 .panel.wysiwyg h2 {
   font-family: "AvenirNextLTW01-UltraLi";
   font-size: 4.2rem;
   letter-spacing: 1.2px;
   color: #2F4858;
 }
-/* line 103, sass/modules/_modules.scss */
+/* line 115, sass/modules/_modules.scss */
 .panel.wysiwyg h3 {
   font-family: "AvenirNextLTW01-Regular";
   font-size: 3.6rem;
   color: #2F4858;
   letter-spacing: 1.03px;
 }
-/* line 111, sass/modules/_modules.scss */
+/* line 123, sass/modules/_modules.scss */
 .panel.wysiwyg h4 {
   font-family: "Avenir Next LT W01 Demi";
   font-size: 3.2rem;
   color: #2F4858;
   letter-spacing: 1px;
 }
-/* line 119, sass/modules/_modules.scss */
+/* line 131, sass/modules/_modules.scss */
 .panel.wysiwyg h5 {
   font-family: "Avenir Next LT W01 Bold";
   font-size: 2.8rem;
   color: #c36256;
   letter-spacing: 0.88px;
 }
-/* line 127, sass/modules/_modules.scss */
+/* line 139, sass/modules/_modules.scss */
 .panel.wysiwyg h6 {
   font-family: "AvenirNextLTW01-Medium";
   font-size: 2.4rem;
   color: #2F4858;
   letter-spacing: 0.75px;
 }
-/* line 135, sass/modules/_modules.scss */
+/* line 147, sass/modules/_modules.scss */
 .panel.wysiwyg p, .panel.wysiwyg ul, .panel.wysiwyg li {
   font-family: "Merriweather", serif;
   font-weight: 400;
@@ -1282,7 +1304,7 @@ footer form p {
   line-height: 24px;
   color: #909090;
 }
-/* line 143, sass/modules/_modules.scss */
+/* line 155, sass/modules/_modules.scss */
 .panel.wysiwyg blockquote {
   font-family: "AvenirNextLTW01-Italic";
   font-style: italic;
@@ -1290,43 +1312,43 @@ footer form p {
   border-left: 1px solid #909090;
   padding-left: 10px;
 }
-/* line 152, sass/modules/_modules.scss */
+/* line 164, sass/modules/_modules.scss */
 .panel.wysiwyg blockquote p {
   font-family: "AvenirNextLTW01-Italic";
 }
-/* line 159, sass/modules/_modules.scss */
+/* line 171, sass/modules/_modules.scss */
 .panel.wysiwyg ul li {
   list-style-type: disc;
 }
-/* line 162, sass/modules/_modules.scss */
+/* line 174, sass/modules/_modules.scss */
 .panel.wysiwyg ol li {
   list-style-type: decimal;
 }
-/* line 165, sass/modules/_modules.scss */
+/* line 177, sass/modules/_modules.scss */
 .panel.wysiwyg img {
   max-width: 100%;
   height: auto;
 }
-/* line 169, sass/modules/_modules.scss */
+/* line 181, sass/modules/_modules.scss */
 .panel.wysiwyg a {
   color: #2F4858;
   font-weight: 700;
   transition: opacity 0.2s ease-in-out;
   text-decoration: underline;
 }
-/* line 174, sass/modules/_modules.scss */
+/* line 186, sass/modules/_modules.scss */
 .panel.wysiwyg a:hover {
   text-decoration: none;
   opacity: 0.8;
 }
-/* line 181, sass/modules/_modules.scss */
+/* line 193, sass/modules/_modules.scss */
 .panel.intro h2 {
   font-family: "AvenirNextLTW01-Medium";
   font-size: 5.4rem;
   letter-spacing: 0.46px;
   line-height: 62px;
 }
-/* line 189, sass/modules/_modules.scss */
+/* line 201, sass/modules/_modules.scss */
 .panel.intro a.cta {
   line-height: 50px;
   color: #FFFFFF;
@@ -1341,23 +1363,23 @@ footer form p {
   font-family: "AvenirNextLTW01-Regular";
 }
 @media screen and (max-width: 750px) {
-  /* line 189, sass/modules/_modules.scss */
+  /* line 201, sass/modules/_modules.scss */
   .panel.intro a.cta {
     margin-bottom: 40px;
     margin-top: 0px;
   }
 }
-/* line 207, sass/modules/_modules.scss */
+/* line 219, sass/modules/_modules.scss */
 .panel.intro a.cta p {
   color: #FFFFFF;
 }
-/* line 210, sass/modules/_modules.scss */
+/* line 222, sass/modules/_modules.scss */
 .panel.intro a.cta:hover {
   background: #FFFFFF;
   color: #c36256;
   border: 2px solid #FFFFFF;
 }
-/* line 216, sass/modules/_modules.scss */
+/* line 228, sass/modules/_modules.scss */
 .panel.intro p {
   color: #909090;
   font-size: 1.4rem;
@@ -1365,7 +1387,7 @@ footer form p {
   font-family: "Merriweather", serif;
   font-weight: 700;
 }
-/* line 222, sass/modules/_modules.scss */
+/* line 234, sass/modules/_modules.scss */
 .panel.intro p.cta {
   line-height: 50px;
   color: #FFFFFF;
@@ -1380,23 +1402,23 @@ footer form p {
   font-family: "AvenirNextLTW01-Regular";
 }
 @media screen and (max-width: 750px) {
-  /* line 222, sass/modules/_modules.scss */
+  /* line 234, sass/modules/_modules.scss */
   .panel.intro p.cta {
     margin-bottom: 40px;
     margin-top: 0px;
   }
 }
-/* line 240, sass/modules/_modules.scss */
+/* line 252, sass/modules/_modules.scss */
 .panel.intro p.cta p {
   color: #FFFFFF;
 }
-/* line 243, sass/modules/_modules.scss */
+/* line 255, sass/modules/_modules.scss */
 .panel.intro p.cta:hover {
   background: #FFFFFF;
   color: #c36256;
 }
 
-/* line 252, sass/modules/_modules.scss */
+/* line 264, sass/modules/_modules.scss */
 .hero {
   position: absolute;
   top: 0;
@@ -1409,7 +1431,7 @@ footer form p {
   background-position: center;
 }
 
-/* line 266, sass/modules/_modules.scss */
+/* line 278, sass/modules/_modules.scss */
 .img-filter {
   position: absolute;
   top: 0;
@@ -1419,48 +1441,48 @@ footer form p {
   opacity: 0.8;
 }
 
-/* line 276, sass/modules/_modules.scss */
+/* line 288, sass/modules/_modules.scss */
 .card {
   position: relative;
   text-align: center;
   color: #FFFFFF;
 }
 @media screen and (max-width: 750px) {
-  /* line 276, sass/modules/_modules.scss */
+  /* line 288, sass/modules/_modules.scss */
   .card {
     margin-bottom: 60px;
   }
-  /* line 282, sass/modules/_modules.scss */
+  /* line 294, sass/modules/_modules.scss */
   .card:last-of-type {
     margin-bottom: 0px;
   }
 }
-/* line 286, sass/modules/_modules.scss */
+/* line 298, sass/modules/_modules.scss */
 .card .text {
   max-width: 255px;
   margin: 0 auto;
 }
-/* line 290, sass/modules/_modules.scss */
+/* line 302, sass/modules/_modules.scss */
 .card a {
   color: #FFFFFF;
 }
-/* line 292, sass/modules/_modules.scss */
+/* line 304, sass/modules/_modules.scss */
 .card a:hover {
   text-decoration: none;
 }
-/* line 294, sass/modules/_modules.scss */
+/* line 306, sass/modules/_modules.scss */
 .card a:hover img {
   -webkit-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   transform: translateY(-8px);
 }
-/* line 301, sass/modules/_modules.scss */
+/* line 313, sass/modules/_modules.scss */
 .card h3 {
   font-family: "Avenir Next LT W01 Demi";
   font-size: 3.2rem;
   letter-spacing: 1px;
 }
-/* line 308, sass/modules/_modules.scss */
+/* line 320, sass/modules/_modules.scss */
 .card p {
   font-family: "Merriweather", serif;
   color: #FFFFFF;
@@ -1469,7 +1491,7 @@ footer form p {
   letter-spacing: 0.47px;
   line-height: 25px;
 }
-/* line 316, sass/modules/_modules.scss */
+/* line 328, sass/modules/_modules.scss */
 .card img {
   transition: transform 0.2s ease-in-out;
   max-height: 140px;
@@ -1477,7 +1499,7 @@ footer form p {
   margin-bottom: 2rem;
 }
 
-/* line 324, sass/modules/_modules.scss */
+/* line 336, sass/modules/_modules.scss */
 .clearfix {
   clear: both;
 }

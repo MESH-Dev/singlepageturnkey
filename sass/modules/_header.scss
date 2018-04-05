@@ -5,6 +5,9 @@ header{
    z-index: 100;
    height: 64px;
    overflow: hidden;
+   @media screen and ($bp-smaller-than-tablet){
+      overflow: visible;
+   }
 }
 
 .logo{
