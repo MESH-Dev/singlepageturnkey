@@ -31,13 +31,13 @@
       max-width: 845px;
       margin: 0 auto;
       h1{
-         font-family: $av-italic;
+         // font-family: $av-italic;
          letter-spacing: 2.5px;
          line-height: 65px;
          margin-bottom: 20px;
-         // font-family: $primary_font;
-         // font-weight: 300;
-         // font-style: italic;
+         font-family: $primary_font;
+         font-weight: 300;
+         font-style: italic;
          @media screen and ($bp-smaller-than-mobile){
             line-height: normal;
             font-size: 3.6rem;
@@ -97,52 +97,52 @@
          }
       }
       h1{
-         font-family: $av-demibold;
+         // font-family: $av-demibold;
          font-size: 4.8rem;
          letter-spacing: 1.5px;
          color: $primary_color;
-         // font-family: $primary_font;
-         // font-weight: 600;
+         font-family: $primary_font;
+         font-weight: 600;
       }
       h2{
-         font-family: $av-ultralight;
+         // font-family: $av-ultralight;
          font-size: 4.2rem;
          letter-spacing: 1.2px;
          color: $secondary_color;
-         // font-family: $primary_font;
-         // font-weight: 200;
+         font-family: $primary_font;
+         font-weight: 200;
       }
       h3{
-         font-family: $av-regular;
+         // font-family: $av-regular;
          font-size: 3.6rem;
          color: $secondary_color;
          letter-spacing: 1.03px;
-         // font-family: $primary_font;
-         // font-weight: 400;
+         font-family: $primary_font;
+         font-weight: 400;
       }
       h4{
-         font-family: $av-demibold;
+         // font-family: $av-demibold;
          font-size: 3.2rem;
          color: $secondary_color;
          letter-spacing: 1px;
-         // font-family: $primary_font;
-         // font-weight: 600;
+         font-family: $primary_font;
+         font-weight: 600;
       }
       h5{
-         font-family: $av-bold;
+         // font-family: $av-bold;
          font-size: 2.8rem;
          color: $primary_color;
          letter-spacing: 0.88px;
-         // font-family: $primary_font;
-         // font-weight: 700;
+         font-family: $primary_font;
+         font-weight: 700;
       }
       h6{
-         font-family: $av-medium;
+         // font-family: $av-medium;
          font-size: 2.4rem;
          color: $secondary_color;
          letter-spacing: 0.75px;
-         // font-family: $primary_font;
-         // font-weight: 500;
+         font-family: $primary_font;
+         font-weight: 500;
       }
       p, ul, li{
          font-family: $secondary_font;
@@ -153,19 +153,19 @@
          color: $grey;
       }
       blockquote{
-         font-family: $av-italic;
+         // font-family: $av-italic;
          font-style: italic;
          letter-spacing: 0.4px;
          border-left: 1px solid $grey;
          padding-left: 10px;
-         // font-family: $primary_font;
-         // font-weight: 400;
-         // font-style: italic;
+         font-family: $primary_font;
+         font-weight: 400;
+         font-style: italic;
          p{
-            font-family: $av-italic;
-            // font-family: $primary_font;
-            // font-weight: 400;
-            // font-style: italic;
+            // font-family: $av-italic;
+            font-family: $primary_font;
+            font-weight: 400;
+            font-style: italic;
          }
       }
       ul li{
@@ -191,12 +191,12 @@
    }
    &.intro{
       h2{
-         font-family: $av-medium;
+         // font-family: $av-medium;
          font-size: 5.4rem;
          letter-spacing: 0.46px;
          line-height: 62px;
-         // font-family: $primary_font;
-         // font-weight: 500;
+         font-family: $primary_font;
+         font-weight: 500;
       }
       a.cta{
          line-height: 50px;
@@ -209,9 +209,9 @@
          display: inline-block;
          margin-top: 20px;
          transition: all 0.2s ease-in-out;
-         font-family: $av-regular;
-         // font-family: $primary_font;
-         // font-weight: 400;
+         // font-family: $av-regular;
+         font-family: $primary_font;
+         font-weight: 400;
          @media screen and ($bp-smaller-than-tablet){
             margin-bottom: 40px;
             margin-top: 0px;
@@ -242,9 +242,9 @@
             display: inline-block;
             margin-top: 20px;
             transition: all 0.2s ease-in-out;
-            font-family: $av-regular;
-            // font-family: $primary_font;
-            // font-weight: 400;
+            // font-family: $av-regular;
+            font-family: $primary_font;
+            font-weight: 400;
             @media screen and ($bp-smaller-than-tablet){
                margin-bottom: 40px;
                margin-top: 0px;
@@ -311,11 +311,11 @@
       }
    }
    h3{
-      font-family: $av-demibold;
+      // font-family: $av-demibold;
       font-size: 3.2rem;
       letter-spacing: 1px;
-      // font-family: $primary_font;
-      // font-weight: 600;
+      font-family: $primary_font;
+      font-weight: 600;
    }
    p{
       font-family: $secondary_font;

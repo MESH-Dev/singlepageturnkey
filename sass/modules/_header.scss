@@ -58,9 +58,9 @@ header{
             padding: 0 20px;
             letter-spacing: 1.5px;
             transition: box-shadow 0.2s ease-in-out;
-            font-family: $av-demibold;
-            // font-family: $primary_font;
-            // font-weight: 800;
+            // font-family: $av-demibold;
+            font-family: $primary_font;
+            font-weight: 800;
             &:hover{
                text-decoration: none;
             }
@@ -80,9 +80,9 @@ header{
    padding: 0 20px;
    letter-spacing: 1.5px;
    cursor: pointer;
-   font-family: $av-demibold;
-   // font-family: $primary_font;
-   // font-weight: 800;
+   // font-family: $av-demibold;
+   font-family: $primary_font;
+   font-weight: 800;
    &:hover{
       text-decoration: none;
    }
