@@ -35,6 +35,8 @@ footer{
          margin-right: 14px;
          transition: transform 0.2s ease-in-out;
          &:hover{
+            -webkit-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
             transform: translateY(-5px);
          }
       }

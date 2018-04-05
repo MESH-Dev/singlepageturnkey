@@ -7,6 +7,8 @@
    padding: 50vh 0 0 0;
    text-align: center;
    .container{
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
    }
    .hero{
@@ -16,6 +18,8 @@
       position: absolute;
       bottom: 50px;
       left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       cursor: pointer;
       svg{
@@ -76,6 +80,7 @@
       h1,h2,h3,h4,h5,h6{
          margin-bottom: 1rem;
          a{
+            font-weight: inherit;
             text-decoration: underline;
          }
       }
@@ -120,12 +125,12 @@
          // font-weight: 700;
       }
       h6{
-         $font-family: $av-medium;
+         font-family: $av-medium;
          font-size: 2.4rem;
          color: $secondary_color;
          letter-spacing: 0.75px;
-         font-family: $primary_font;
-         font-weight: 500;
+         // font-family: $primary_font;
+         // font-weight: 500;
       }
       p, ul, li{
          font-family: $secondary_font;
@@ -141,14 +146,14 @@
          letter-spacing: 0.4px;
          border-left: 1px solid $grey;
          padding-left: 10px;
-         font-family: $primary_font;
-         font-weight: 400;
-         font-style: italic;
+         // font-family: $primary_font;
+         // font-weight: 400;
+         // font-style: italic;
          p{
             font-family: $av-italic;
-            font-family: $primary_font;
-            font-weight: 400;
-            font-style: italic;
+            // font-family: $primary_font;
+            // font-weight: 400;
+            // font-style: italic;
          }
       }
       ul li{
@@ -287,6 +292,8 @@
       &:hover{
          text-decoration: none;
          img{
+            -webkit-transform: translateY(-8px);
+            -ms-transform: translateY(-8px);
             transform: translateY(-8px);
          }
       }
@@ -312,4 +319,8 @@
       max-width: 100%;
       margin-bottom: 2rem;
    }
+}
+
+.clearfix{
+   clear: both;
 }

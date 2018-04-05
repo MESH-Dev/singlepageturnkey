@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		</div>
-		<a id="scrollLink" alt="scroll down link">
+		<a id="scrollLink">
 			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 31">
 			    <g>
 			      <path d="M3,1.31l37.3,27.88L77.6,1.31" style="fill: none;stroke: #fff;stroke-width: 3px"/>
@@ -46,7 +46,7 @@
 									$cta_link_external = get_sub_field('cta_link_external');
 									$cta_title = get_sub_field('cta_title');
 									if(!empty($cta_title)){ ?>
-										<a alt="call to action link" href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?>><p class="cta"><?php echo $cta_title ?></p></a>
+										<a href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?>><p class="cta"><?php echo $cta_title ?></p></a>
 									<?php };
 									?>
 								</div>
@@ -89,7 +89,7 @@
 									$card_img = get_sub_field('card_image');
 									$card_img_url = $card_img['sizes']['medium_large'];
 									?>
-									<a alt="card link" href="<?php the_sub_field('card_link'); ?>">
+									<a href="<?php the_sub_field('card_link'); ?>">
 										<img src="<?php echo $card_img_url ?>" alt="">
 										<div class="text">
 											<h3><?php the_sub_field('card_title'); ?></h3>
