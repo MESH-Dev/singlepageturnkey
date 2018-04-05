@@ -67,6 +67,9 @@ footer{
    font-family: $av-bold;
    font-size: 2rem;
    letter-spacing: 0.5px;
+   @media screen and ($bp-smaller-than-tablet){
+      margin-top: 40px;
+   }
 }
 
 .byline{
@@ -80,9 +83,15 @@ footer{
    }
    @media screen and ($bp-smaller-than-tablet){
       position: relative;
+      bottom: auto;
+      right: auto;
+      margin: 10px auto 0px auto;
    }
 }
 
 #footer{
    padding-bottom: 86px;
+   @media screen and ($bp-smaller-than-tablet){
+      padding-bottom: 46px;
+   }
 }

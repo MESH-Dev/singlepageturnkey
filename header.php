@@ -29,10 +29,15 @@
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<?php
+	$logo = get_field('site_logo', 'option');
+	$logo_url = $logo['sizes']['medium'];
+	$favicon_url = $logo['sizes']['small'];
+	?>
+	<link rel="shortcut icon" href="<?php echo $favicon_url ?>">
+	<link rel="apple-touch-icon" href="<?php echo $favicon_url ?>">
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $favicon_url ?>">
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $favicon_url ?>">
 
 	<!-- Analytics -->
 	<?php the_field('google_analytics_code', 'option'); ?>
@@ -64,10 +69,6 @@
 			<div class="row">
 				<div class="columns-12">
 					<a class="logo" href="#top">
-						<?php
-						$logo = get_field('site_logo', 'option');
-						$logo_url = $logo['sizes']['medium'];
-						?>
 						<img src="<?php echo $logo_url ?>" alt="">
 					</a>
 					<nav id="main-nav" class="main-navigation">

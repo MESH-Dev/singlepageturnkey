@@ -50,6 +50,13 @@
             font-size: 1.4rem;
          }
       }
+      a{
+         color: $white;
+         text-decoration: underline;
+         &:hover{
+            text-decoration: none;
+         }
+      }
    }
 }
 
