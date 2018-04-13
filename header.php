@@ -22,10 +22,66 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<!-- Typography & Icon Fonts -->
-	<?php the_field('primary_font_code', 'option'); ?>
-	<?php the_field('secondary_font_code', 'option'); ?>
-	<script type="text/javascript" src="//fast.fonts.net/jsapi/d83c48dc-a071-4201-8498-8171cd5f545e.js"></script>
+	<?php 
+
+		$primary_font_css = get_field('primary_font_css', 'option');
+		$secondary_font_css = get_field('secondary_font_css', 'option');
+		$pf_css = '';
+		$sf_css = '';
+
+		$primary_font = get_field('primary_font_code', 'option');
+		//the_field('primary_font_code', 'option'); 
+		if($primary_font != '' && $primary_font_css != ''){
+			echo $primary_font;
+		}else{
+			echo '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">';
+		}
+		$secondary_font = get_field('secondary_font_code', 'option');
+		//the_field('secondary_font_code', 'option'); 
+		if($secondary_font != '' && $primary_font_css != ''){
+			echo $secondary_font;
+		}else{
+			echo '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">';
+		}
+
+	?>
+	
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+	<?php 
+		
+		if($primary_font != '' && $primary_font_css != ''){
+			$pf_css = $primary_font_css;
+		}else{
+			$pf_css = "font-family: 'Nunito Sans', sans-serif;";
+		}
+
+		if($secondary_font != '' && $secondary_font_css != ''){
+			$sf_css = $secondary_font_css; 
+		}else{
+			$sf_css = "font-family: 'Merriweather', serif;";
+		}
+		
+	?>
+
+	<style>
+		.pf, 
+		.panel.wysiwyg blockquote,
+		.panel.wysiwyg blockquote p,
+		.panel.wysiwyg,
+		.main-navigation,
+		input,
+		textarea{
+			<?php echo $pf_css;?>
+		}
+
+		.sf,
+		.panel.wysiwyg p,
+		.panel.wysiwyg ul,
+		.panel.wysiwyg li{
+			<?php echo $sf_css;?>
+		}
+	</style>
 
 	<!-- Favicons
 	================================================== -->
@@ -46,15 +102,23 @@
 	<?php the_field('google_sitemap_verification', 'option'); ?>
 	<?php the_field('bing_sitemap_verification', 'option'); ?>
 
-	<!-- BugHerd -->
-	<script type='text/javascript'>
-	(function (d, t) {
-	  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-	  bh.type = 'text/javascript';
-	  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=znrmvoewdxxnxj2ofwhsfw';
-	  s.parentNode.insertBefore(bh, s);
-	  })(document, 'script');
-	</script>
+	<?php 
+		$primary_color = get_field('primary_color', 'option');
+		$secondary_color = get_field('secondary_color', 'option');
+		$tertiary_color = get_field('tertiary_color', 'options');
+
+	?>
+
+	<style>
+		p.cta{
+			background-color:<?php echo $tertiary_color; ?>;
+		}
+		p.cta:hover,
+		p.cta:active,
+		p.cta:focus{
+			color: <?php echo $tertiary_color; ?> !important;
+		}
+	</style>
 
 	<?php wp_head(); ?>
 

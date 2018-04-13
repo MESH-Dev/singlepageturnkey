@@ -9,7 +9,7 @@ footer{
       line-height: 20px;
       color: $white;
       // font-family: $av-medium;
-      font-family: $primary_font;
+      //font-family: $primary_font;
       font-weight: 400;
    }
    .address, .contact-media{
@@ -23,7 +23,7 @@ footer{
          text-decoration: none;
          transition: all 0.2s ease-in-out;
          // font-family: $av-bold;
-         font-family: $primary_font;
+         //font-family: $primary_font;
          font-weight: 700;
          &:hover{
             opacity: 0.8;
@@ -71,7 +71,7 @@ footer{
    font-size: 2rem;
    letter-spacing: 0.5px;
    // font-family: $av-bold;
-   font-family: $primary_font;
+   //font-family: $primary_font;
    font-weight: 700;
    @media screen and ($bp-smaller-than-tablet){
       margin-top: 40px;

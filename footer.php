@@ -8,7 +8,7 @@ $secondary_color = get_field('secondary_color', 'option');
 	<div class="container">
 		<div class="row">
          <div id="left-col" class="columns-4">
-            <h5 class="footer-title"><?php the_field('contact_section_title', 'option'); ?></h5>
+            <h5 class="footer-title pf"><?php the_field('contact_section_title', 'option'); ?></h5>
             <?php
             $line1 = get_field('address_line_1', 'option');
             $line2 = get_field('address_line_2', 'option');
@@ -27,10 +27,10 @@ $secondary_color = get_field('secondary_color', 'option');
 				<div class="contact-media">
 				<?php
             if (!empty($phone)) { ?>
-               <a href="tel:<?php echo $phone ?>"><p><?php echo $phone ?></p></a>
+               <a href="tel:<?php echo $phone ?>" class="pf"><p><?php echo $phone ?></p></a>
             <?php };
             if (!empty($email)) { ?>
-               <a href="mailto:<?php echo $email ?>"><p><?php echo $email ?></p></a>
+               <a href="mailto:<?php echo $email ?>" class="pf"><p><?php echo $email ?></p></a>
             <?php }; ?>
 				</div>
 				<div class="social">
@@ -47,7 +47,7 @@ $secondary_color = get_field('secondary_color', 'option');
 				</div>
          </div>
          <div id="right-col" class="columns-6 offset-by-2">
-				<h5 class="form-title"><?php the_field('contact_form_title', 'option'); ?></h5>
+				<h5 class="form-title pf"><?php the_field('contact_form_title', 'option'); ?></h5>
             <?php
             if(!empty($contact_form)){
                echo do_shortcode($contact_form);
@@ -55,7 +55,7 @@ $secondary_color = get_field('secondary_color', 'option');
             ?>
          </div>
 		</div>
-		<p class="byline">Site by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
+		<p class="byline pf">Site by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 	</div>
 
 </footer>

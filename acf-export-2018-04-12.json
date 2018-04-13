@@ -1,0 +1,227 @@
+[
+    {
+        "key": "group_5a6662881c713",
+        "title": "Global Site Options",
+        "fields": [
+            {
+                "key": "field_5a6662f1584d8",
+                "label": "Site Logo",
+                "name": "site_logo",
+                "type": "image",
+                "instructions": "Choose an image for the site's logo. This will be displayed in the navigation bar at the top left.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": 4000,
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5ab3f6df5cde0",
+                "label": "Primary Color",
+                "name": "primary_color",
+                "type": "color_picker",
+                "instructions": "Enter the site's primary color. Once this is entered correctly, it is recommended to make no changes. If left blank, the site's primary color will default to #C36256.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#C36256"
+            },
+            {
+                "key": "field_5abd0f348d271",
+                "label": "Secondary Color",
+                "name": "secondary_color",
+                "type": "color_picker",
+                "instructions": "Enter the site's secondary color. Once this is entered correctly, it is recommended to make no changes. If left blank, the site's secondary color will default to #2F4858.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#2F4858"
+            },
+            {
+                "key": "field_5abd2ce6553c1",
+                "label": "Tertiary Color",
+                "name": "tertiary_color",
+                "type": "color_picker",
+                "instructions": "Enter the site's tertiary color. Once this is entered correctly, it is recommended to make no changes. If left blank, the site's tertiary color will default to #895EBD.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "#895EBD"
+            },
+            {
+                "key": "field_5ab41edb152db",
+                "label": "Primary Font Code",
+                "name": "primary_font_code",
+                "type": "text",
+                "instructions": "Choose a font from <a href=\"https:\/\/fonts.google.com\" target=\"_blank\">Google fonts<\/a>, and paste the Standard embed code here (<link ...>). Once this is entered, it is recommended to make no changes. If left blank, the site's Primary font will default to the Google font <a href=\"https:\/\/fonts.google.com\/specimen\/Nunito+Sans\" target=\"_blank\">Nunito Sans<\/a>.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5acf62c4e8392",
+                "label": "Primary Font CSS",
+                "name": "primary_font_css",
+                "type": "text",
+                "instructions": "Paste or type the CSS provided by Google for the font chosen as your Primary font.  Will start with 'font-family:...'.  Once this is entered, it is recommended to make no changes.  If this field is blank, the Primary font will revert back to the default Primary font. If this information is not specific to the Primary font chosen, you will be unable to use your Primary font on your site.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5ab41ee7152dc",
+                "label": "Secondary Font Code",
+                "name": "secondary_font_code",
+                "type": "text",
+                "instructions": "Choose a font from <a href=\"https:\/\/fonts.google.com\" target=\"_blank\">Google fonts<\/a>, and paste the Standard embed code here (<link ...>). Once this is entered, it is recommended to make no changes. If left blank, the site's secondary font default to the Google font <a href=\"https:\/\/fonts.google.com\/specimen\/Merriweather\" target=\"_blank\">Merriweather<\/a>.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5acf634ee8393",
+                "label": "Secondary Font CSS",
+                "name": "secondary_font_css",
+                "type": "text",
+                "instructions": "Paste or type the CSS provided by Google for the font chosen as your Secondary font.  Will start with 'font-family:...'.  Once this is entered, it is recommended to make no changes.  If this field is blank, the Secondary font will revert back to the default Secondary font. If this information is not specific to the Secondary font chosen, you will be unable to use your Secondary font on your site.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5ac62c2445d14",
+                "label": "Google Analytics Code",
+                "name": "google_analytics_code",
+                "type": "text",
+                "instructions": "Paste in the code provided by Google Analytics if you want to use this service. If left blank, Google Analytics will not be used on the site. If this field is filled correctly, it is recommended to not edit it unless you want to switch the site to a different Google Analytics account.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5ac62c3945d15",
+                "label": "Google Sitemap Verification",
+                "name": "google_sitemap_verification",
+                "type": "text",
+                "instructions": "Paste in code for Google Sitemap Verification. If you do not wish to use this service or if you wish to verify in a different way, this field can be left blank. If this field is filled correctly, it is recommended to not edit it.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5ac62c4545d16",
+                "label": "Bing Sitemap Verification",
+                "name": "bing_sitemap_verification",
+                "type": "text",
+                "instructions": "Paste in code provided by Bing for Bing Sitemap Verification. If you wish to not use this service or if you wish to verify with a different method, this field may be left blank. If this field is filled correctly, it is recommended to not edit it.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "theme-general-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]

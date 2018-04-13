@@ -15,9 +15,9 @@
 	<?php }; ?>
 		<div class="container">
 			<div class="row">
-				<div class="sign">
-					<h1 id="welcomeTitle"><?php the_field('statement'); ?></h1>
-					<p id="welcomeDesc"><?php the_field('main_blurb'); ?></p>
+				<div class="sign sf">
+					<h1 id="welcomeTitle" class="pf"><?php the_field('statement'); ?></h1>
+					<p id="welcomeDesc" class="sf"><?php the_field('main_blurb'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -40,13 +40,13 @@
 						<div class="container">
 							<div class="row">
 								<div class="columns-5">
-									<h2 class="blurb" style="color:<?php echo $primary_color ?>"><?php the_sub_field('main_blurb'); ?></h2>
+									<h2 class="blurb pf" style="color:<?php echo $primary_color ?>"><?php the_sub_field('main_blurb'); ?></h2>
 									<?php
 									$cta_link = get_sub_field('cta_link');
 									$cta_link_external = get_sub_field('cta_link_external');
 									$cta_title = get_sub_field('cta_title');
 									if(!empty($cta_title)){ ?>
-										<a href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?>><p class="cta"><?php echo $cta_title ?></p></a>
+										<a href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?> style="color:<?php echo $primary_color ?>"><p class="cta pf"><?php echo $cta_title ?></p></a>
 									<?php };
 									?>
 								</div>
@@ -92,8 +92,8 @@
 									<a href="<?php the_sub_field('card_link'); ?>">
 										<img src="<?php echo $card_img_url ?>" alt="">
 										<div class="text">
-											<h3><?php the_sub_field('card_title'); ?></h3>
-											<p><?php the_sub_field('card_blurb'); ?></p>
+											<h3 class="pf"><?php the_sub_field('card_title'); ?></h3>
+											<p clas="sf"><?php the_sub_field('card_blurb'); ?></p>
 										</div>
 									</a>
 								</div>
