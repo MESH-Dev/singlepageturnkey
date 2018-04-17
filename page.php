@@ -8,7 +8,7 @@
 	$primary_color = get_field('primary_color', 'option');
 		$secondary_color = get_field('secondary_color', 'option');
 		$tertiary_color = get_field('tertiary_color', 'options');
-	
+
 	if (!empty($bg_url)) { ?>
 		<div class="welcome-gate" id="top">
 			<div class="hero" style="background-image:url('<?php echo $bg_url ?>')"></div>
@@ -91,8 +91,9 @@
 									<?php
 									$card_img = get_sub_field('card_image');
 									$card_img_url = $card_img['sizes']['medium_large'];
+									$card_link = get_sub_field('card_link');
 									?>
-									<a href="<?php the_sub_field('card_link'); ?>">
+									<a <?php if(!empty($card_link)){ ?> href="<?php echo $card_link ?>" <?php }; ?>>
 										<img src="<?php echo $card_img_url ?>" alt="">
 										<div class="text">
 											<h3 class="pf"><?php the_sub_field('card_title'); ?></h3>
