@@ -4,8 +4,7 @@
 	<?php
 	$bg_img = get_field('background_image');
 	$bg_url = $bg_img['sizes']['background-fullscreen'];
-	$primary_color = get_field('primary_color', 'option');
-	$secondary_color = get_field('secondary_color', 'option');
+	
 	if (!empty($bg_url)) { ?>
 		<div class="welcome-gate" id="top">
 			<div class="hero" style="background-image:url('<?php echo $bg_url ?>')"></div>
@@ -46,12 +45,12 @@
 									$cta_link_external = get_sub_field('cta_link_external');
 									$cta_title = get_sub_field('cta_title');
 									if(!empty($cta_title)){ ?>
-										<a href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?> style="color:<?php echo $primary_color ?>"><p class="cta pf"><?php echo $cta_title ?></p></a>
+										<a href="<?php echo $cta_link ?>"<?php if ($cta_link_external) {echo 'target="_blank"';} ?>><p class="cta pf"><?php echo $cta_title ?></p></a>
 									<?php };
 									?>
 								</div>
 								<div class="columns-6 offset-by-1">
-									<div class="intro-desc"><?php the_sub_field('intro_text'); ?></div>
+									<div class="intro-desc sf"><?php the_sub_field('intro_text'); ?></div>
 								</div>
 							</div>
 						</div>
@@ -93,7 +92,7 @@
 										<img src="<?php echo $card_img_url ?>" alt="">
 										<div class="text">
 											<h3 class="pf"><?php the_sub_field('card_title'); ?></h3>
-											<p clas="sf"><?php the_sub_field('card_blurb'); ?></p>
+											<p class="sf"><?php the_sub_field('card_blurb'); ?></p>
 										</div>
 									</a>
 								</div>
