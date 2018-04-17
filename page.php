@@ -4,6 +4,10 @@
 	<?php
 	$bg_img = get_field('background_image');
 	$bg_url = $bg_img['sizes']['background-fullscreen'];
+
+	$primary_color = get_field('primary_color', 'option');
+		$secondary_color = get_field('secondary_color', 'option');
+		$tertiary_color = get_field('tertiary_color', 'options');
 	
 	if (!empty($bg_url)) { ?>
 		<div class="welcome-gate" id="top">
