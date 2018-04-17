@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 	<!-- Typography & Icon Fonts -->
-	<?php 
+	<?php
 
 		$primary_font_css = get_field('primary_font_css', 'option');
 		$secondary_font_css = get_field('secondary_font_css', 'option');
@@ -30,14 +30,14 @@
 		$sf_css = '';
 
 		$primary_font = get_field('primary_font_code', 'option');
-		//the_field('primary_font_code', 'option'); 
+		//the_field('primary_font_code', 'option');
 		if($primary_font != '' && $primary_font_css != ''){
 			echo $primary_font;
 		}else{
 			echo '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">';
 		}
 		$secondary_font = get_field('secondary_font_code', 'option');
-		//the_field('secondary_font_code', 'option'); 
+		//the_field('secondary_font_code', 'option');
 		if($secondary_font != '' && $primary_font_css != ''){
 			echo $secondary_font;
 		}else{
@@ -45,11 +45,11 @@
 		}
 
 	?>
-	
+
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
-	<?php 
-		
+	<?php
+
 		if($primary_font != '' && $primary_font_css != ''){
 			$pf_css = $primary_font_css;
 		}else{
@@ -57,15 +57,15 @@
 		}
 
 		if($secondary_font != '' && $secondary_font_css != ''){
-			$sf_css = $secondary_font_css; 
+			$sf_css = $secondary_font_css;
 		}else{
 			$sf_css = "font-family: 'Merriweather', serif;";
 		}
-		
+
 	?>
 
 	<style>
-		.pf, 
+		.pf,
 		.panel.wysiwyg blockquote,
 		.panel.wysiwyg blockquote p,
 		.panel.wysiwyg,
@@ -102,7 +102,7 @@
 	<?php the_field('google_sitemap_verification', 'option'); ?>
 	<?php the_field('bing_sitemap_verification', 'option'); ?>
 
-	<?php 
+	<?php
 		$primary_color = get_field('primary_color', 'option');
 		$secondary_color = get_field('secondary_color', 'option');
 		$tertiary_color = get_field('tertiary_color', 'options');
@@ -117,6 +117,12 @@
 		p.cta:active,
 		p.cta:focus{
 			color: <?php echo $tertiary_color; ?> !important;
+		}
+		.main-navigation ul{
+			background-color: <?php echo $primary_color; ?>;
+		}
+		input[type="submit"]:hover{
+			color: <?php echo $primary_color; ?>
 		}
 	</style>
 
