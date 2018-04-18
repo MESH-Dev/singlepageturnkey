@@ -29,20 +29,32 @@
 		$pf_css = '';
 		$sf_css = '';
 
-		$primary_font = get_field('primary_font_code', 'option');
-		//the_field('primary_font_code', 'option');
-		if($primary_font != '' && $primary_font_css != ''){
-			echo $primary_font;
-		}else{
+		$font_select = get_field('font_pairing', 'option');
+		if ($font_select == 1) {
 			echo '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">';
-		}
-		$secondary_font = get_field('secondary_font_code', 'option');
-		//the_field('secondary_font_code', 'option');
-		if($secondary_font != '' && $primary_font_css != ''){
-			echo $secondary_font;
-		}else{
 			echo '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">';
-		}
+			$pf_css = "font-family: 'Nunito Sans', sans-serif;";
+			$sf_css = "font-family: 'Merriweather', serif;";
+		} elseif($font_select == 2){
+			echo '<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">';
+			$pf_css = "font-family: 'Lato', sans-serif;";
+			$sf_css = "font-family: 'Playfair Display', serif;";
+		};
+
+		// $primary_font = get_field('primary_font_code', 'option');
+		// //the_field('primary_font_code', 'option');
+		// if($primary_font != '' && $primary_font_css != ''){
+		// 	echo $primary_font;
+		// }else{
+		// 	echo '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">';
+		// }
+		// $secondary_font = get_field('secondary_font_code', 'option');
+		// //the_field('secondary_font_code', 'option');
+		// if($secondary_font != '' && $primary_font_css != ''){
+		// 	echo $secondary_font;
+		// }else{
+		// 	echo '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">';
+		// }
 
 	?>
 
@@ -50,17 +62,17 @@
 
 	<?php
 
-		if($primary_font != '' && $primary_font_css != ''){
-			$pf_css = $primary_font_css;
-		}else{
-			$pf_css = "font-family: 'Nunito Sans', sans-serif;";
-		}
-
-		if($secondary_font != '' && $secondary_font_css != ''){
-			$sf_css = $secondary_font_css;
-		}else{
-			$sf_css = "font-family: 'Merriweather', serif;";
-		}
+		// if($primary_font != '' && $primary_font_css != ''){
+		// 	$pf_css = $primary_font_css;
+		// }else{
+		// 	$pf_css = "font-family: 'Nunito Sans', sans-serif;";
+		// }
+		//
+		// if($secondary_font != '' && $secondary_font_css != ''){
+		// 	$sf_css = $secondary_font_css;
+		// }else{
+		// 	$sf_css = "font-family: 'Merriweather', serif;";
+		// }
 
 	?>
 
